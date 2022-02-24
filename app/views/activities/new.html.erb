@@ -1,0 +1,10 @@
+新しく持ちものを追加する
+<%= form_with model:@activity, local: true do |f| %>
+種類
+  <%= f.text_field :name %>
+  <%= f.submit %>
+<% end %>
+
+<% @activities.each do |activities| %>
+  <%= activities.name %>
+<% end %>
