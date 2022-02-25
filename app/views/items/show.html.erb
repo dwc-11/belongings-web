@@ -1,0 +1,9 @@
+
+<%= @item.name %>
+<%= @item.season %>
+<%= @item.toransportation %>
+<% @item.relations.each do |activity| %>
+  <%= activity.item.id %>
+<% end %>
+
+<%= link_to '編集', edit_item_path(@item.id) %>
