@@ -5,13 +5,14 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
+    @relations = @item.relations.build ##親モデル.子モデル.buildで子モデルのインスタンス作成
   end
 
   def create
     @item = Item.new(item_params)
-    @relations = @item.relations.build(category_params)
     @item.save
     redirect_to item_path(@item.id)
+
   end
 
   def show
@@ -36,6 +37,11 @@ class ItemsController < ApplicationController
 
   private
     def  item_params
-      params.require(:item).permit(:name, :season, :amenity, :toransportation , {:relation_ids=>[]})
+      params.require(:item).permit(:name, :season, :amenity, :toransportation ,:_destroy,
+      relations_attributes: [:id, :item_id, :activity_id ,:_destroy]
+      )
+
     end
+
+
 end

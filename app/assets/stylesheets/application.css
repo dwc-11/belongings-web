@@ -13,3 +13,45 @@
  *= require_tree .
  *= require_self
  */
+
+header{
+  background-color: #dfd
+}
+
+.top-form{
+
+}
+
+.top-form_season{
+  display: none
+}
+
+.top-form_amenity{
+  display: none
+}
+
+.top-form_transpotation{
+  display: none
+}
+
+.top-form_activity_1{
+  display: none
+}
+
+
+
+.top-form_activity_2_1{
+  display: none
+}
+
+.top-form_activity_2_2{
+  display: none
+}
+
+.top-form_activity_2_3{
+  display: none
+}
+
+.seach{
+  display: none
+}

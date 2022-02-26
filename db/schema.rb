@@ -21,8 +21,8 @@ ActiveRecord::Schema.define(version: 2022_02_24_062330) do
   create_table "items", force: :cascade do |t|
     t.string "name"
     t.string "season"
-    t.string "amenity"
-    t.string "toransportation"
+    t.boolean "amenity", null: false
+    t.boolean "toransportation", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
