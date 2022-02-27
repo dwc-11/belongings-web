@@ -1,3 +1,5 @@
+  <%= form_with url: search_path, method: :get, local: true do |f| %>
+
 <span class="start">開始</span>
 <div class="top-form">
 <div class="top-form_season">
@@ -30,7 +32,7 @@
 </div>
 
   <div class="top-form_activity_2_1">
-    <span class="top-form_activity_2_btn">登山</span>
+    <span class="top-form_activity_2_btn"><%= f.label :name,value: '登山' %></span>
     <span class="top-form_activity_2_btn">キャンプ</span>
     <span class="top-form_activity_2_btn">川遊び</span>
   </div>
@@ -46,6 +48,13 @@
     <span class="top-form_activity_2_btn">ドライブ</span>
     <span class="top-form_activity_2_btn">自転車旅</span>
   </div>
-
-<span class="seach">検索</span>
+<%= f.text_field :keyword, value: @keyword %>
+<span class="seach"><%= f.submit '検索' %></span>
 </div>
+<% end %>
+
+
+  <% @items.each do |item| %>
+    <%= item.name %>
+
+  <% end %>

@@ -55,3 +55,7 @@ header{
 .seach{
   display: none
 }
+
+span{
+  background-color: #ccc
+}
