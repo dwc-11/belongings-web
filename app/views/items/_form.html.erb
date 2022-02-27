@@ -1,0 +1,29 @@
+<%= form_with(model: @item, local: true) do |s| %>
+名前
+  <%= s.text_field :name %>
+季節
+  <%= s.select :season, ['春', '夏', '秋', '冬','通年'], {include_blank: '選択してください'} %>
+移動方法
+      <%= s.radio_button :toransportation, true %>
+      <%= s.label :toransportation, '電車/新幹線/', value: true ,checked: true%>
+
+      <%= s.radio_button :toransportation, false %>
+      <%= s.label :toransportation, 'なし', value: false %>
+
+アメニティ
+      <%= s.radio_button :amenity, true %>
+      <%= s.label :amenity, 'あり', value: true ,checked: true%>
+
+      <%= s.radio_button :amenity, false %>
+      <%= s.label :amenity, 'なし', value: false %>
+    <%= s.fields_for :relations do |t| %>
+      <%= render "relation_fields", f: t %>
+    <% end %>
+      <div class="links">
+        <span><%= link_to_add_association "追加", s, :relations %></span>
+      </div>
+
+   <%= s.submit %>
+<% end %>
+
+

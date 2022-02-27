@@ -3,8 +3,8 @@ class CreateItems < ActiveRecord::Migration[5.2]
     create_table :items do |t|
       t.string :name
       t.string :season
-      t.string :amenity
-      t.string :toransportation
+      t.boolean :amenity, null: false
+      t.boolean :toransportation, null: false
 
       t.timestamps
     end

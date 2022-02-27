@@ -1,0 +1,10 @@
+<div class="nested-fields cooking_from">
+
+
+  <div class="meals-new_table_row">
+
+    <%= f.hidden_field :item_id %>
+    <%= f.collection_select :activity_id, Activity.all, :id, :name ,:include_blank => "選択してください" %>
+  </div>
+  <div><%= link_to_remove_association '削除', f, class: 'meals-new_table_delete_btn_cooking' %></div>
+</div>

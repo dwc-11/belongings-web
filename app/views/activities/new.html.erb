@@ -5,6 +5,6 @@
   <%= f.submit %>
 <% end %>
 
-<% @activities.each do |activities| %>
-  <%= activities.name %>
+<% @activities.each do |activity| %>
+  <%= link_to activity.name ,activity_path(activity.id) %>
 <% end %>

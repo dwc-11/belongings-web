@@ -1,9 +1,10 @@
 
 <%= @item.name %>
 <%= @item.season %>
+<%= @item.amenity %>
 <%= @item.toransportation %>
-<% @item.relations.each do |activity| %>
-  <%= activity.item.id %>
+<% @item.relations.each do |relation| %>
+  <%= relation.activity.name %>
 <% end %>
 
 <%= link_to '編集', edit_item_path(@item.id) %>

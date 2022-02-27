@@ -1,0 +1,8 @@
+アクティビティ編集
+<%= form_with model:@activity, local: true do |f| %>
+種類
+  <%= f.text_field :name %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to '削除' ,activity_path(@activity.id) ,method: :delete, data: {confirm:'本当に削除しますか？'} %>
