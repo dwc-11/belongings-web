@@ -32,29 +32,32 @@
 </div>
 
   <div class="top-form_activity_2_1">
-    <span class="top-form_activity_2_btn"><%= f.label :name,value: '登山' %></span>
-    <span class="top-form_activity_2_btn">キャンプ</span>
-    <span class="top-form_activity_2_btn">川遊び</span>
+    <span class="top-form_activity_2_btn top-form_activity_2_1_1">登山</span>
+    <span class="top-form_activity_2_btn top-form_activity_2_1_2">キャンプ</span>
+    <span class="top-form_activity_2_btn top-form_activity_2_1_3">川遊び</span>
   </div>
 
   <div class="top-form_activity_2_2">
-    <span class="top-form_activity_2_btn">釣り</span>
-    <span class="top-form_activity_2_btn">海水浴</span>
-    <span class="top-form_activity_2_btn">ダイビング</span>
+    <span class="top-form_activity_2_btn top-form_activity_2_2_1">釣り</span>
+    <span class="top-form_activity_2_btn top-form_activity_2_2_2">海水浴</span>
+    <span class="top-form_activity_2_btn top-form_activity_2_2_3">ダイビング</span>
   </div>
 
   <div class="top-form_activity_2_3">
-    <span class="top-form_activity_2_btn">遊園地</span>
-    <span class="top-form_activity_2_btn">ドライブ</span>
-    <span class="top-form_activity_2_btn">自転車旅</span>
+    <span class="top-form_activity_2_btn top-form_activity_2_3_1">遊園地</span>
+    <span class="top-form_activity_2_btn top-form_activity_2_3_2">ドライブ</span>
+    <span class="top-form_activity_2_btn top-form_activity_2_3_1">自転車旅</span>
   </div>
-<%= f.text_field :keyword, value: @keyword %>
+
+
 <span class="seach"><%= f.submit '検索' %></span>
 </div>
 <% end %>
 
 
-  <% @items.each do |item| %>
-    <%= item.name %>
+  <% @activity.each do |activity| %>
 
+      <% activity.relations.each do |relation| %>
+        <%= relation.item.name %>
+      <% end %>
   <% end %>

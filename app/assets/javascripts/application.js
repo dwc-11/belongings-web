@@ -17,7 +17,7 @@
 //= require_tree .
 //= require cocoon
 $(document).on('turbolinks:load', function () {
-  
+
     $('.start').on("click", function () {
       $('.start').hide()
       $('.top-form_season').show()
@@ -65,5 +65,50 @@ $(document).on('turbolinks:load', function () {
       $('.top-form_activity_2_2').hide()
       $('.top-form_activity_2_3').hide()
       $('.seach').show()
+    });
+
+    // 登山を選択
+    $('.top-form_activity_2_1_1').on("click", function () {
+      $('.top-form_activity_1_1_btn').after($(`<input value="登山" type="hidden" name="keyword" id="keyword" />`))
+    });
+
+    // キャンプを選択
+    $('.top-form_activity_2_1_2').on("click", function () {
+      $('.top-form_activity_1_1_btn').after($(`<input value="キャンプ" type="hidden" name="keyword" id="keyword" />`))
+    });
+
+    // 川遊び
+    $('.top-form_activity_2_1_3').on("click", function () {
+      $('.top-form_activity_1_1_btn').after($(`<input value="川遊び" type="hidden" name="keyword" id="keyword" />`))
+    });
+
+    // 釣りを選択
+    $('.top-form_activity_2_2_1').on("click", function () {
+      $('.top-form_activity_1_1_btn').after($(`<input value="釣り" type="hidden" name="keyword" id="keyword" />`))
+    });
+
+    // 海水浴を選択
+    $('.top-form_activity_2_2_2').on("click", function () {
+      $('.top-form_activity_1_1_btn').after($(`<input value="海水浴" type="hidden" name="keyword" id="keyword" />`))
+    });
+
+    // ダイビング
+    $('.top-form_activity_2_3_3').on("click", function () {
+      $('.top-form_activity_1_1_btn').after($(`<input value="ダイビング" type="hidden" name="keyword" id="keyword" />`))
+    });
+
+    // 遊園地を選択
+    $('.top-form_activity_2_2_1').on("click", function () {
+      $('.top-form_activity_1_1_btn').after($(`<input value="遊園地" type="hidden" name="keyword" id="keyword" />`))
+    });
+
+    // ドライブを選択
+    $('.top-form_activity_2_2_2').on("click", function () {
+      $('.top-form_activity_1_1_btn').after($(`<input value="ドライブ" type="hidden" name="keyword" id="keyword" />`))
+    });
+
+    // 自転車旅
+    $('.top-form_activity_2_3_3').on("click", function () {
+      $('.top-form_activity_1_1_btn').after($(`<input value="自転車旅" type="hidden" name="keyword" id="keyword" />`))
     });
 })

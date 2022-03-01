@@ -3,7 +3,5 @@ class Item < ApplicationRecord
   has_many :activities , through: :relations
   accepts_nested_attributes_for :relations, allow_destroy: true
 
-  def self.search(keyword)
-    where(["name", "%#{keyword}%", "%#{keyword}%"])
-  end
+
 end
