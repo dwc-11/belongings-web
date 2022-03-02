@@ -93,17 +93,17 @@ $(document).on('turbolinks:load', function () {
     });
 
     // ダイビング
-    $('.top-form_activity_2_3_3').on("click", function () {
+    $('.top-form_activity_2_2_3').on("click", function () {
       $('.top-form_activity_1_1_btn').after($(`<input value="ダイビング" type="hidden" name="keyword" id="keyword" />`))
     });
 
     // 遊園地を選択
-    $('.top-form_activity_2_2_1').on("click", function () {
+    $('.top-form_activity_2_3_1').on("click", function () {
       $('.top-form_activity_1_1_btn').after($(`<input value="遊園地" type="hidden" name="keyword" id="keyword" />`))
     });
 
     // ドライブを選択
-    $('.top-form_activity_2_2_2').on("click", function () {
+    $('.top-form_activity_2_3_2').on("click", function () {
       $('.top-form_activity_1_1_btn').after($(`<input value="ドライブ" type="hidden" name="keyword" id="keyword" />`))
     });
 

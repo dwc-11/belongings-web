@@ -19,8 +19,9 @@
 
 
 <div class="top-form_transpotation">
-  transpotationは？(いる/いらない)
-  <span class="top-form_transpotation_btn">いる</span>
+  transpotationは？(乗り物を使う/いらない)
+  <span class="top-form_transpotation_btn">使う</span>
+  <input value="true" type="hidden" name="boolean" id="boolean" />
   <span class="top-form_transpotation_btn">いらない</span>
 </div>
 
@@ -46,7 +47,7 @@
   <div class="top-form_activity_2_3">
     <span class="top-form_activity_2_btn top-form_activity_2_3_1">遊園地</span>
     <span class="top-form_activity_2_btn top-form_activity_2_3_2">ドライブ</span>
-    <span class="top-form_activity_2_btn top-form_activity_2_3_1">自転車旅</span>
+    <span class="top-form_activity_2_btn top-form_activity_2_3_3">自転車旅</span>
   </div>
 
 
@@ -54,10 +55,6 @@
 </div>
 <% end %>
 
-
-  <% @activity.each do |activity| %>
-
-      <% activity.relations.each do |relation| %>
-        <%= relation.item.name %>
-      <% end %>
-  <% end %>
+<% if @activity != Activity.all %>
+  <%= render "item" %>
+<% end %>
