@@ -1,8 +1,6 @@
 class HomesController < ApplicationController
   def top
-  @activity = Activity.all
-
-
+    @activity = Activity.all
   end
 
 

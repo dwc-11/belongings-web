@@ -4,4 +4,8 @@ class Activity < ApplicationRecord
     def self.search(keyword)
     where(["name like?", "%#{keyword}%"])
     end
+
+    def self.transpotation(boolean)
+    where(["transpotation like?", "%#{boolean}%"])
+    end
 end

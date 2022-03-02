@@ -3,8 +3,11 @@
 <%= @item.season %>
 <%= @item.amenity %>
 <%= @item.toransportation %>
-<% @item.relations.each do |relation| %>
-  <%= relation.activity.name %>
-<% end %>
+
+    <% @item.relations.each do |relation| %>
+      <% if  relation.activity.present?  %>
+      <%= relation.activity.name %>
+      <% end %>
+    <% end %>
 
 <%= link_to '編集', edit_item_path(@item.id) %>

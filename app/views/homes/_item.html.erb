@@ -1,0 +1,6 @@
+
+  <% @activity.each do |activity| %>
+      <% activity.relations.each do |relation| %>
+        <%= relation.item.name %>
+      <% end %>
+  <% end %>
